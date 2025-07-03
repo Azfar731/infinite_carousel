@@ -1,12 +1,12 @@
 import logosLinks from "~/data.json";
-import type { Route } from "+/types/home";
+import type { Route } from "./+types/home";
 
 export async function loader() {
   const logos = logosLinks;
   return { logos };
 }
 
-export default function Carousel({ loaderData }: Route.LoaderArgs) {
+export default function Carousel({ loaderData }: Route.ComponentProps) {
   const { logos } = loaderData;
 
   return (
